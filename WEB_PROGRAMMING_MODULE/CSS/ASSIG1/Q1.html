@@ -1,0 +1,92 @@
+<!--Question 1: Create your own HTML page on any one of the following topics (or your own
+idea):
+Yourself (mini-resume or about me)
+A travel destination
+A favorite movie or game
+A training institute, product, or service
+Then, apply CSS styles using all types of selectors (mentioned below):
+Universal selector
+Element selector
+Class selector
+ID selector
+Group selector
+Descendant selector-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Swami</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f1e7e7;
+        }
+
+       #container {
+            width: 70%;
+            margin: 20px auto;
+            background-color: rgba(250, 249, 249, 0.836);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .heading {
+            color: darkblue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+         h2, p {
+            margin-bottom: 10px;
+        }
+
+          .section ul li {
+            margin-left: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h1 class="heading">About Me</h1>
+
+        <div class="section">
+            <h2>Personal Information</h2>
+            <p><b>Name:</b> Swami Vinod Jadhav</p>
+            <p><b>Course:</b> TY B.Sc. Computer Science</p>
+            <p><b>Email:</b> swami@example.com</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+                <li>PHP</li>
+                <li>MySQL / PostgreSQL</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Career Objective</h2>
+            <p>
+                To become a skilled software developer and build useful web applications.
+            </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+

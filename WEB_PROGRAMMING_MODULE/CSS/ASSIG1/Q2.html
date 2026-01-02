@@ -1,0 +1,228 @@
+<!--Question 2: Given Below is HTML code ,use this code and apply CSS as mentioned below
+the code:
+Apply CSS using selectors as mentioned below:
+
+1. Universal Selector (*)
+Set font for the entire page to Arial
+2. Tag (Element) Selectors
+body:
+Background color: #fdfdf5 (off-white)
+Text color: #222
+h1:
+Text color: dark green #006400
+Center alignment
+Background color: light yellow #ffeb3b
+Padding: 20px
+Bottom border: 3px solid grey #ccc
+Bottom margin: 20px
+h2, h3:
+Background color: light green #e0f2e9
+Padding: 10px
+Left margin: 15px
+Left border: 5px solid green #2e7d32
+
+p:
+Text color: #2f4f4f
+Line height: 1.6
+Margin: 10px 20px
+ul:
+List style: square
+Left margin: 40px
+hr:
+Top and bottom margin: 30px
+Height: 2px
+Background color: grey #ccc
+a:
+Text color: #388e3c
+Bold
+Left margin: 20px
+3. Class Selectors
+.highlight:
+Background color: yellow #fff176
+Bold text
+Padding: 5px
+Rounded corners (optional)
+.note:
+Text color: crimson
+Italic
+Background color: #f0f0f0
+Padding: 5px
+.footer:
+Center alignment
+Font-size: 14px
+Text color: grey
+Background color: #f5f5f5
+Padding: 15px
+
+4. ID Selectors
+#mainTitle:
+Font size: 32px
+Top padding: 15px
+Bottom border: 2px solid green #4caf50
+#footerNote:
+Top margin: 20px
+Top padding: 10px
+Border-top: 1px dashed grey #999
+5. Group Selector
+Use one selector to style:
+h2, h3, .course
+Text color: dark green #2e7d32
+6. Descendant Selectors
+Paragraph inside .about-section:
+Font size: 18px
+Background color: light green #f1f8e9
+Padding: 10px
+Left border: 4px solid #81c784
+List items inside .courses-section:
+Background color: light yellow #f9fbe7
+Padding: 5px 0
+Bottom border: 1px solid #dce775
+Paragraphs inside #contact:
+Left margin: 20px-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FirstBit Training And Placement Institute</title>
+    <style>
+      /* You will write your CSS here as per instructions */
+
+      * {
+        font-family: Arial;
+      }
+
+      /* 2. Element (Tag) Selectors */
+      body {
+        background-color: #fdfdf5;
+        color: #222;
+      }
+
+      h1 {
+        color: #006400;
+        text-align: center;
+        background-color: #ffeb3b;
+        padding: 20px;
+        border-bottom: 3px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      h2,
+      h3 {
+        background-color: #e0f2e9;
+        padding: 10px;
+        margin-left: 15px;
+        border-left: 5px solid #2e7d32;
+      }
+
+      p {
+        color: #2f4f4f;
+        line-height: 1.6;
+        margin: 10px 20px;
+      }
+
+      ul {
+        list-style: square;
+        margin-left: 40px;
+      }
+
+      hr {
+        margin: 30px 0;
+        height: 2px;
+        background-color: #ccc;
+        border: none;
+      }
+
+      a {
+        color: #388e3c;
+        font-weight: bold;
+        margin-left: 20px;
+        text-decoration: none;
+      }
+
+      /* 3. Class Selectors */
+      .highlight {
+        background-color: #fff176;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      .note {
+        color: crimson;
+        font-style: italic;
+        background-color: #f0f0f0;
+        padding: 5px;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 14px;
+        color: grey;
+        background-color: #f5f5f5;
+        padding: 15px;
+      }
+
+      /* 4. ID Selectors */
+      #mainTitle {
+        font-size: 32px;
+        padding-top: 15px;
+        border-bottom: 2px solid #4caf50;
+      }
+
+      #footerNote {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px dashed #999;
+      }
+
+      /* 5. Group Selector */
+      h2,
+      h3,
+      .course {
+        color: #2e7d32;
+      }
+
+      /* 6. Descendant Selectors */
+      .about-section p {
+        font-size: 18px;
+        background-color: #f1f8e9;
+        padding: 10px;
+        border-left: 4px solid #81c784;
+      }
+
+      .courses-section li {
+        background-color: #f9fbe7;
+        padding: 5px 0;
+        border-bottom: 1px solid #dce775;
+      }
+
+      #contact p {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mainTitle">Welcome to FirstBit Solutions</h1>
+    <div class="about-section">
+      <h2>About Us</h2>
+      <p>We provide training in Java, Python, Web Development and more.</p>
+    </div>
+
+    <div class="courses-section">
+      <h2>Courses Offered</h2>
+      <ul>
+        <li class="course">Java Full Stack</li>
+        <li class="course highlight">Python Full Stack</li>
+        <li class="course">Front-End Development</li>
+      </ul>
+    </div>
+    <div id="contact">
+      <h3>Contact Us</h3>
+      <p class="note">Email: contact@firstbitsolutions.com</p>
+      <p>Phone: 9876543210</p>
+      <a href="https://firstbitsolutions.com/">Visit Our Website</a>
+    </div>
+    <hr class="divider" />
+    <p class="footer" id="footerNote">© 2025 FirstBit Solutions</p>
+  </body>
+</html>
