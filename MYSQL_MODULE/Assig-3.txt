@@ -1,0 +1,127 @@
+1. Write a SQL statement to insert a record as follows:
+
+Answer:-
+Employees :
+insert into employees
+    -> (e_id,first_name,last_name,email,hire_date,job_id,salary,comission_pct,manager_id,department_id)
+    -> values(102,"lex","dehaan","ldehaan","2022-12-22",10002,23000,2000,1002,2),
+    -> (103,"laxman","babar","ewq","2022-3-22",10003,20000,3000,1003,3),
+    -> (104,"shubham","kamble","ddsaewq","2022-4-22",10004,18000,2000,1004,4),
+    -> (105,"ganesh","jagtap","abcd","2022-3-1",10005,19000,2000,1005,5),
+    -> (106,"jay","kamble","lkjhg","2019-6-2",10006,15000,2000,1006,6),
+    -> (107,"sonali","kakde","poiew","2019-9-4",10007,17000,2000,1007,7),
+    -> (108,"sakshi","kakde","prtyuiw","2020-9-2",10008,19000,2000,1008,8),
+    -> (109,"mayur","surve","mnbvc","2018-3-5",10009,18000,2000,1009,9);
+
+mysql> table employees;
++------+------------+-----------+---------+------------+--------+--------+---------------+------------+---------------+
+| e_id | first_name | last_name | email   | hire_date  | job_id | salary | comission_pct | manager_id | department_id |
++------+------------+-----------+---------+------------+--------+--------+---------------+------------+---------------+
+|  101 | sam        | jadhav    | xyz     | 2022-12-02 |  10001 |   9000 |          2000 |       1001 |             1 |
+|  102 | lex        | dehaan    | ldehaan | 2022-12-22 |  10002 |  23000 |          2000 |       1002 |             2 |
+|  103 | laxman     | babar     | ewq     | 2022-03-22 |  10003 |  20000 |          3000 |       1003 |             3 |
+|  104 | shubham    | kamble    | ddsaewq | 2022-04-22 |  10004 |  18000 |          2000 |       1004 |             4 |
+|  105 | ganesh     | jagtap    | abcd    | 2022-03-01 |  10005 |  19000 |          2000 |       1005 |             5 |
+|  106 | jay        | kamble    | lkjhg   | 2019-06-02 |  10006 |  15000 |          2000 |       1006 |             6 |
+|  107 | sonali     | kakde     | poiew   | 2019-09-04 |  10007 |  17000 |          2000 |       1007 |             7 |
+|  108 | sakshi     | kakde     | prtyuiw | 2020-09-02 |  10008 |  19000 |          2000 |       1008 |             8 |
+|  109 | mayur      | surve     | mnbvc   | 2018-03-05 |  10009 |  18000 |          2000 |       1009 |             9 |
++------+------------+-----------+---------+------------+--------+--------+---------------+------------+---------------+
+
+Department :
+
+mysql> insert into department
+    -> (department_id,department_name,manager_id,location_id)
+    -> values(10,"administration",200,1700),
+    -> (20,"marketing",201,1800),
+    -> (30,"purcheasing",114,1700),
+    -> (40,"human resources",203,2400),
+    -> (50,"shipping",121,1500),
+    -> (60,"it",103,1400),
+    -> (70,"public relation",204,2700),
+    -> (80,"sales",145,2500);
+Query OK, 8 rows affected (0.02 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> select * from department;
++---------------+-----------------+------------+-------------+
+| department_id | department_name | manager_id | location_id |
++---------------+-----------------+------------+-------------+
+|            10 | administration  |        200 |        1700 |
+|            20 | marketing       |        201 |        1800 |
+|            30 | purcheasing     |        114 |        1700 |
+|            40 | human resources |        203 |        2400 |
+|            50 | shipping        |        121 |        1500 |
+|            60 | it              |        103 |        1400 |
+|            70 | public relation |        204 |        2700 |
+|            80 | sales           |        145 |        2500 |
++---------------+-----------------+------------+-------------+
+
+2. Write a SQL statement to insert 3 rows by a single insert statement.
+
+Answer:-
+mysql> insert into department
+    -> (department_id, department_name,manager_id)
+    -> values(90,"ghjkl",898);
+Query OK, 1 row affected (0.01 sec)
+
+
+
+3. Write a SQL statement to insert one row in jobs table to ensure that no duplicate
+value will be entered in the job_id column.
+
+Answer:-
+
+mysql> create table job
+    -> (job_id int primary key,
+    -> job_titale varchar(20),
+    -> min_salary int,
+    -> max_salary int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into job
+    -> (job_id,job_titale,min_salary,max_salary)
+    -> value(101,"programmer",15000,20000);
+Query OK, 1 row affected (0.02 sec)
+
+4. Write SQL statement to increment salary of each emp by 10%.
+
+Answer:-
+
+update employees
+set salary = salary * 1.10;
+
+
+5. Write a SQL statement to change the email column of employees table with 'not
+available' for those employees whose department_id is 80 and gets a
+commission is less than .20%
+
+Answer:-
+
+update employees
+set email = 'not available'
+where department_id = 80
+  and commission_pct < 0.20;
+
+
+6. Write a SQL statement to change the email column of employees table with 'not
+available' for those employees who belongs to the 'Purchasing' department.
+
+Answer:-
+
+update employees
+set email = 'not available'
+where department_id = (
+    select department_id
+    from departments
+    where department_name = 'Purchasing');
+
+
+7. Write a SQL statement to change the email and commission_pct column of
+employees table with 'not available' and 0.10 for all employees.
+
+Answer:-
+
+update employees
+set email = 'not available',
+    commission_pct = 0.10;
