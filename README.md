@@ -1,7 +1,7 @@
-# Programming Fundamentals Repository
+# Programming Fundamentals & Web Technologies Repository
 
-This repository contains structured and well-organized source code examples developed using **C**, **MySQL**, and **Core Java**.  
-The purpose of this repository is to demonstrate a strong foundation in programming, database concepts, and object-oriented principles.
+This repository contains structured and well-organized source code examples developed using **C**, **MySQL**, **Core Java**, and **Web Programming technologies**.  
+The objective of this repository is to demonstrate strong fundamentals in programming, database management, object-oriented principles, and web development.
 
 ---
 
@@ -12,6 +12,7 @@ The repository is organized by technology, with each section covering fundamenta
 - **C Programming** – Procedural programming and core concepts  
 - **MySQL** – Database design and SQL query implementation  
 - **Core Java** – Object-oriented programming and Java fundamentals  
+- **Web Programming** – Frontend and backend web development concepts  
 
 ---
 
@@ -19,7 +20,11 @@ The repository is organized by technology, with each section covering fundamenta
 
 - C  
 - MySQL  
-- Java (Core Java – JDK)
+- Java (Core Java – JDK)  
+- HTML  
+- CSS  
+- JavaScript  
+- PHP  
 
 ---
 
@@ -46,13 +51,22 @@ The repository is organized by technology, with each section covering fundamenta
 - Collections framework  
 - Multithreading basics  
 
+### Web Programming
+- HTML structure and semantic tags  
+- CSS styling and layouts  
+- Responsive design (Bootstrap / Media Queries)  
+- JavaScript basics and DOM manipulation  
+- PHP fundamentals  
+- Form handling and server-side scripting  
+- Database connectivity (PHP with MySQL)  
+
 ---
 
 ## 🎯 Objective
 
-- Strengthen programming fundamentals  
-- Apply theoretical concepts in practical scenarios  
-- Maintain a centralized reference for learning and revision  
+- Build a strong foundation in programming and web technologies  
+- Apply theoretical concepts through practical implementation  
+- Maintain a centralized, reusable codebase for learning and revision  
 
 ---
 
@@ -60,13 +74,15 @@ The repository is organized by technology, with each section covering fundamenta
 
 - GCC Compiler (for C programs)  
 - MySQL Server  
-- Java Development Kit (JDK)
+- Java Development Kit (JDK)  
+- Web Browser  
+- Local Server (XAMPP / WAMP / LAMP)
 
 ---
 
 ## 📄 Usage
 
-Clone the repository and navigate to the relevant directory to explore and execute the programs.
+Clone the repository and navigate to the required directory to explore and execute the programs.
 
 ```bash
 git clone https://github.com/your-username/your-repository-name.git
